@@ -1,3 +1,85 @@
+# 🏗 DEX Challenge - Speed Run Ethereum
+
+## 🚀 Quick Start
+
+### System Requirements
+- [Node.js >= v20.18.3](https://nodejs.org/en/download/)
+- [Yarn](https://classic.yarnpkg.com/en/docs/install/)
+- [Git](https://git-scm.com/downloads)
+
+### 1. Cài đặt dependencies
+```bash
+yarn install
+```
+
+### 2. Chạy Local (Development)
+
+**Terminal 1** - Khởi động local blockchain:
+```bash
+yarn chain
+```
+
+**Terminal 2** - Deploy contracts:
+```bash
+yarn deploy
+```
+
+**Terminal 3** - Khởi động frontend:
+```bash
+yarn start
+```
+
+Mở http://localhost:3000 để xem ứng dụng.
+
+### 3. Deploy lên Testnet (Sepolia)
+
+```bash
+# Tạo deployer wallet
+yarn generate
+
+# Kiểm tra địa chỉ và balance
+yarn account
+
+# Hoặc
+
+yarn account:import
+
+# Lấy secret key từ metamask extension rồi dùng sepolia testnet
+
+# Lấy Sepolia ETH tại: https://cloud.google.com/application/web3/faucet/ethereum/sepolia
+
+# Deploy contracts
+yarn deploy --network sepolia
+
+# Verify contracts
+yarn verify --network sepolia
+```
+
+### 4. Deploy Frontend lên Vercel
+
+Sửa `packages/nextjs/scaffold.config.ts`:
+```typescript
+targetNetworks: [chains.sepolia],
+onlyLocalBurnerWallet: false,
+```
+
+Sau đó:
+```bash
+yarn vercel:login
+yarn vercel --prod
+```
+
+### 📋 Thông tin Deployment
+
+| Item | Value |
+|------|-------|
+| **Network** | Sepolia Testnet |
+| **DEX Contract** | `0x5bBE6A56a73C718CC426ebCE91E4d47d3ab1cB7C` |
+| **Balloons Contract** | `0x7e411DF56f7a469f026bB0a840b6C029Ef0471CD` |
+| **Frontend URL** | https://nextjs-29p3n5rvf-quach-ngc-minhs-projects.vercel.app |
+
+---
+
 # 🏗 Scaffold-ETH 2
 
 <h4 align="center">

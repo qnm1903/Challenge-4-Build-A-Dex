@@ -74,7 +74,7 @@ yarn vercel --prod
 | Item | Value |
 |------|-------|
 | **Network** | Sepolia Testnet |
-| **DEX Contract** | `0x5bBE6A56a73C718CC426ebCE91E4d47d3ab1cB7C` |
+| **DEX Contract** | `0x0682C4E7a1Fb565B8552E19d14eb4140A9213916` |
 | **Balloons Contract** | `0x7e411DF56f7a469f026bB0a840b6C029Ef0471CD` |
 | **Frontend URL** | https://nextjs-29p3n5rvf-quach-ngc-minhs-projects.vercel.app |
 
